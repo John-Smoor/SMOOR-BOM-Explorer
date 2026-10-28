@@ -1,0 +1,31 @@
+{
+  "name": "smoor-bom-explorer",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "parity:py": "python3 -I parity/py_reference.py ${STREAMLIT_APP_DIR:-../smoor_bom_app} parity/out/py.json",
+    "parity": "tsx parity/compare.ts parity/out/py.json",
+    "seed:blobs": "node scripts/seed-blobs.mjs"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}
